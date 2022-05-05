@@ -36,20 +36,21 @@
     </video>
     {%if output == "REAL" %}
     <h4 class="mx-auto">Result: <span style="color:green">{{output}}</span>
-      <img src="{% static 'images/thumpup.png'%}" alt="real" height="100px" width=auto> </h4>
+      <img src="{% static 'images/thumpup.png'%}" alt="real" height="100px" width=auto>
       {%else%}
       <h4 class="mx-auto">Result: <span style="color:red">{{output}}</span>
-        <img src="{% static 'images/thumpdown.png'%}" alt="fake" height="100px" width=auto ></h4>
-      {%endif%}]
-  <!--
+        <img src="{% static 'images/thumpdown.png'%}" alt="fake" height="100px" width=auto >
+      {%endif%}
+  </div>
+<!--
   <h3>Heat Maps</h3>
   <div id="heatmap_images" class="col-12 mb-4 ">
     {% for each_heatmap_image in heatmap_images %}
     <img src="{%static each_heatmap_image%}" class="heat-map" width="100" height="150" />
-    -->
     {%endfor%}
   </div>
-  </div>
+</div>
+-->
 {%endif%}
 {%endblock%}
 {%block js_cripts%}
@@ -89,10 +90,10 @@
           var confidence = '{{confidence}}';
           var drawOptions = {label: result.concat("  " , confidence , "%")};
           if (result == 'REAL'){
-            drawOptions["boxColor"] = "#0d7e12";
+            drawOptions["boxColor"] = "#0f0";
           }
           else if (result == 'FAKE'){
-            drawOptions["boxColor"] = "#bb0505";
+            drawOptions["boxColor"] = "#f00";
           }
           var box = { x: resizedDetections[i].box.x, y: resizedDetections[i].box.y, height: 100, width: 100 };
           const drawBox = new faceapi.draw.DrawBox(box, drawOptions);
