@@ -1,9 +1,9 @@
-"""project_settings URL Configuration
+"""deepfake_settings URL Configuration
 """
 from django.contrib import admin
 from django.urls import path, include
 from . import views
-from .views import about, index, predict_page, cuda_full
+from .views import about, index, predict_page,cuda_full
 
 app_name = 'dfd_app'
 handler404 = views.handler404

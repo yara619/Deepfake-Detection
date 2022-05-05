@@ -18,6 +18,7 @@
                     <div class="form-group">
                         <label>{{form.upload_video_file.widget}}</label>
                         {{form.upload_video_file}}
+                        <!-- <input type="file" id="{{form.upload_video_file.id_for_label}}" name="{{form.upload_video_file.name}}" /> -->
                         {%if form.upload_video_file.errors%}
                         {%for each_error in form.upload_video_file.errors%}
                         <div class="alert alert-danger mt-1 {{form.upload_video_file.id_for_label}}">
@@ -40,7 +41,7 @@
                         {%endfor%}
                         {%endif%}
                     </div>
-                    <button id="videoUpload" type="submit" name="submit" class="btn btn-success mt-3 btn-block">Upload Video</button>
+                    <button id="videoUpload" type="submit" name="submit" class="btn btn-success mt-3 btn-block">Upload</button>
                 </form>
             </div>
         </div>

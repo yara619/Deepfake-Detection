@@ -337,9 +337,9 @@ def predict_page(request):
                 prediction = predict(model, video_dataset[i], './', video_file_name_only)
                 confidence = round(prediction[1], 1)
                 print("<=== |  Predicition Done | ===>")
-                #print("<=== | Heat map creation started | ===>")
-                #for j in range(0, sequence_length):
-                   #heatmap_images.append(plot_heat_map(j, model, video_dataset[i], './', video_file_name_only))
+                # print("<=== | Heat map creation started | ===>")
+                # for j in range(0, sequence_length):
+                #     heatmap_images.append(plot_heat_map(j, model, video_dataset[i], './', video_file_name_only))
                 if prediction[0] == 1:
                     output = "REAL"
                 else:
@@ -356,7 +356,7 @@ def predict_page(request):
 
 
 def about(request):
-    return render(request, 'about.html')
+    return render(request, about_template_name)
 
 
 def handler404(request, exception):

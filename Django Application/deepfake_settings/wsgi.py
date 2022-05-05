@@ -1,5 +1,5 @@
 """
-WSGI config for project_settings project.
+WSGI config for deepfake_settings project.
 
 It exposes the WSGI callable as a module-level variable named ``application``.
 
@@ -11,6 +11,6 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'project_settings.settings')
+os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'deepfake_settings.settings')
 
 application = get_wsgi_application()
