@@ -2,8 +2,9 @@
 {% load static %}
 {%block content%}
 {%if no_faces%}
+<div class="bg">
 <div class="container">
-  <div class="logo text-center mb-3"><img src="{% static 'images/logo1.png'%}" alt="Logo" ></div>
+  <div class="logo text-center mb-4 "><img src="{% static 'images/logo1.png'%}" alt="Logo" ></div>
   <hr />
   <div class="alert alert-danger">
     No faces detected. Cannot process the video.
@@ -13,8 +14,7 @@
 <div class="container">
   <div class="logo text-center mb-3"><img src="{% static 'images/logo1.png'%}" alt="Logo" ></div>
   <hr />
-
-  <h3>Frames Split</h3>
+  <h3>Extracted Frames</h3>
   <div id="preprocessed_images" class="col-12 mt-4 mb-2">
     {% for each_image in preprocessed_images %}
     <img src="{%static each_image%}" class="preprocess" width=auto height="250" />
@@ -22,7 +22,7 @@
   </div>
 
 
-  <h3>Face Cropped Frames</h3>
+  <h3>Cropped Face Frames</h3>
   <div id="faces_images" class="col-12 mb-2">
     {% for each_image in faces_cropped_images %}
     <img src="{%static each_image%}" class="faces" width=auto height="150" />
@@ -41,6 +41,7 @@
       <h4 class="mx-auto">Result: <span style="color:red">{{output}}</span>
         <img src="{% static 'images/thumpdown.png'%}" alt="fake" height="100px" width=auto >
       {%endif%}
+    </div>
   </div>
 <!--
   <h3>Heat Maps</h3>
